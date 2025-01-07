@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    --primary-color: hsl(215, 51%, 70%);
+    --highlight-color: hsl(178, 100%, 50%);
+    --dark-700: hsl(217, 54%, 11%);
+    --dark-600: hsl(216, 50%, 16%);
+    --dark-500: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --font-serif: "Young Serif", serif;
+    --font-sans: "Outfit", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-700);
+    font-family: var(--font-sans);
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+.header {
+    width: 50%;
+    height: 80vh;
+    padding: 1rem;
+    width: 70%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+
+}
+
+.header-container {
+    margin-top: 2rem;
+    position: fixed;
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    width: 45%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-600);
+    border-radius: 0.5rem;
+
+}
+
+
+@media(min-width:768px){
+
+    body{
+        display: flex;
+    }
+    .header{
+        width: 60%;
+        display: flex;
+        
+        grid-template-columns: 1fr;
+        
+    }  
+    .header-container{
+    width: 30%;
+        position: fixed;
+    } 
+    
+}
+
+@media(max-width:540px){
+    .header-container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    } 
+    body{
+        width: 90%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .image {
+        justify-content: center;
+    }
+    .icon{
+        justify-content: center;
+    left: 39.5%;
+    }
+}
+
+.image {
+    margin-top: 5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 90%;
+}
+
+img {
+
+    width: 70%;
+    display: flex;
+    margin: -2em auto;
+    border-radius: 0.5rem;
+    border: 1px solid #555;
+    object-fit: cover;
+}
+
+.icon {
+    position: absolute;
+    top: 23.5.6%;
+    border: none;
+    right: 37%;
+    width: 69.5%;
+    margin:-4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+flex-direction: column;
+    padding: 1rem;
+    opacity: -1;
+    transition: opacity 0.3s ease;
+    background-color: var(--highlight-color);
+}
+
+.icon:hover{
+cursor: pointer;
+opacity: .7;
+
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    padding: 2rem;
+    font-family: var(--font-sans);
+    margin-right: 5rem;
+margin-top: 1rem;
+}
+
+h1:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
+}
+
+.header-text {
+    padding: 0.5rem 4rem;
+    color: var(--primary-color);
+    font-weight: 300;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    margin-top: -1rem;
+}
+
+.layer-1,
+.layer-2 {
+    padding: 1rem;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    font-family: var(--font-sans);
+}
+
+.layer-1 {
+    color: var(--highlight-color);
+    font-weight: 500;
+}
+
+.layer-2 {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.img-span {
+    border: none;
+    width: 30%;
+    margin-right: 5px;
+}
+
+.flex-group {
+    display: flex;
+    align-items: center;
+    padding: 0.1rem;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.border {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    border: 2px solid hsl(212, 15%, 22%);
+    border-top: 1px solid hsl(210, 4%, 18%);
+}
+
+.section {
+    padding: 1rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-right: 10rem;
+}
+
+.img-avarta {
+    width: 40%;
+    border-radius: 50%;
+    border: 1.5px solid var(--white);
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    color: var(--primary-color);
+    white-space: nowrap;
+    gap: 2rem;
+}
+
+.name-P {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    font-weight: 600;
+    margin-left: -2em;
+    margin-top: -0.1em;
+}
+
+.name-P:hover {
+    cursor: pointer;
+    color: var(--highlight-color);
+}
+
+.attribution{
+    margin-top: 3rem;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
